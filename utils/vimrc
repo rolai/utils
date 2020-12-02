@@ -1,0 +1,145 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'nathanaelkane/vim-indent-guides'    "缩进显示"
+Plugin 'fholgado/minibufexpl.vim'    "操作多个文件"
+Plugin 'Yggdroot/indentLine'    "缩进指示线"
+Plugin 'scrooloose/nerdtree'    "树形目录配置"
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'majutsushi/tagbar'    "显示文件的类、函数、变量"
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'vim-syntastic/syntastic'    "语法检查"
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" .vimrc
+" See: http://vimdoc.sourceforge.net/htmldoc/options.html for details
+
+" For multi-byte character support (CJK support, for example):
+" set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,gb18030,latin1
+       
+set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
+ 
+set shiftwidth=4    " Number of spaces to use for each step of (auto)indent.
+ 
+set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
+                    " Spaces are used in indents with the '>' and '<' commands
+                    " and when 'autoindent' is on. To insert a real tab when
+                    " 'expandtab' is on, use CTRL-V <Tab>.
+ 
+set smarttab        " When on, a <Tab> in front of a line inserts blanks
+                    " according to 'shiftwidth'. 'tabstop' is used in other
+                    " places. A <BS> will delete a 'shiftwidth' worth of space
+                    " at the start of the line.
+ 
+set showcmd         " Show (partial) command in status line.
+
+set number          " Show line numbers.
+
+set showmatch       " When a bracket is inserted, briefly jump to the matching
+                    " one. The jump is only done if the match can be seen on the
+                    " screen. The time to show the match can be set with
+                    " 'matchtime'.
+ 
+set hlsearch        " When there is a previous search pattern, highlight all
+                    " its matches.
+ 
+set incsearch       " While typing a search command, show immediately where the
+                    " so far typed pattern matches.
+ 
+set ignorecase      " Ignore case in search patterns.
+ 
+set smartcase       " Override the 'ignorecase' option if the search pattern
+                    " contains upper case characters.
+ 
+set backspace=2     " Influences the working of <BS>, <Del>, CTRL-W
+                    " and CTRL-U in Insert mode. This is a list of items,
+                    " separated by commas. Each item allows a way to backspace
+                    " over something.
+ 
+set autoindent      " Copy indent from current line when starting a new line
+                    " (typing <CR> in Insert mode or when using the "o" or "O"
+                    " command).
+ 
+set textwidth=79    " Maximum width of text that is being inserted. A longer
+                    " line will be broken after white space to get this width.
+ 
+set formatoptions=c,q,r,t " This is a sequence of letters which describes how
+                    " automatic formatting is to be done.
+                    "
+                    " letter    meaning when present in 'formatoptions'
+                    " ------    ---------------------------------------
+                    " c         Auto-wrap comments using textwidth, inserting
+                    "           the current comment leader automatically.
+                    " q         Allow formatting of comments with "gq".
+                    " r         Automatically insert the current comment leader
+                    "           after hitting <Enter> in Insert mode. 
+                    " t         Auto-wrap text using textwidth (does not apply
+                    "           to comments)
+ 
+set ruler           " Show the line and column number of the cursor position,
+                    " separated by a comma.
+ 
+set background=dark " When set to "dark", Vim will try to use colors that look
+                    " good on a dark background. When set to "light", Vim will
+                    " try to use colors that look good on a light background.
+                    " Any other value is illegal.
+ 
+set mouse=a         " Enable the use of the mouse.
+
+" 隐藏滚动条"
+set guioptions-=r
+set guioptions-=L
+set guioptions-=b
+"隐藏顶部标签栏"
+set showtabline=0
+"设置字体"
+set guifont=Monaco:h13
+syntax on   "开启语法高亮"
+let g:solarized_termcolors=256  "solarized主题设置在终端下的设置"
+set nowrap  "设置不折行"
+set fileformat=unix "设置以unix的格式保存文件"
+set cindent     "设置C样式的缩进格式"
+set shiftwidth=4        "同上"
+set scrolloff=5     "距离顶部和底部5行"
+set laststatus=2    "命令行为两行"
+set fenc=utf-8      "文件编码"
+set backspace=2
+set selection=exclusive
+set selectmode=mouse,key
+set matchtime=5
+set noexpandtab     "不允许扩展table"
+set whichwrap+=<,>,h,l
+set autoread
+set cursorline      "突出显示当前行"
+set cursorcolumn        "突出显示当前列"
+
+filetype plugin indent on
+syntax on
